@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<title>MSL Pretty User Bar</title>
+		<link rel="stylesheet" href="style.css" type="text/css" media="all">
+	</head>
+	<body>
+		<div id="myModal" class="reveal-modal account-logged-in-modal">
+		   <div id="supplementarypanels" class="fullwidthwrapper" style=""> 
+				<div id="panelcontent" class="centre" style="">
+		    		<div class="panelheight">
+						<!-- Left hand column -->
+						<div class="grid_left_colum">
+						
+							<div class="intropanel">
+								<h2>Hey <span class="user-name"></span>,</h2>
+								<p class="size16px stagmedium doublespace">Now that you're logged in there's a tonne of great stuff you can do!</p>
+								
+		                        <p class="bold">From joining societies to voting in an election, now you can do ALL* the things!<br/><br/><span style="font-size:85%;">*as long as you are eligible for ALL the things, if not then you'll be able to do some of the things!</span></p>
+							</div>
+							
+						</div>
+						
+						<!-- Right hand panel -->
+		                <div class="div_big_right_colum">
+		                
+							<div class="top">
+		                    	<p class="closepanel hoverfade">
+		                        	<a class="close-reveal-modal signin-close">&#215;</a>
+		                        </p>
+		                    </div>
+		                    
+		                    
+		                    <div class="bottom" style="height: 235px;">                        
+		                        <!-- Clickable buttons -->
+		                        <div class="grid_content_colum three_col_supplimentary account_left_side">
+		                        	<ul>
+		                                <li><a  id="account_account_btn" href="#" class="selected">Account</a></li>
+		                                <li><a  id="account_inbox_btn" href="#">Inbox</a></li>
+		                                <li><a id="account_friends_btn" href="http://www.kentunion.co.uk/friends/">Friends</a></li>
+		                                <li id="account_admin_btn_container"><a  id="account_admin_btn" href="#">Admin</a></li>
+		                                <li id="account_control_btn_container"><a id="account_control_btn" href="#">Control Panel</a></li>
+		                            </ul>
+		                    	</div>
+		                        
+		                        <!-- The major content section -->
+		                        <div class="grid_content_colum three_col_supplimentary account_right_side">
+		                        	<!-- Account code holder - filled by JavaScript -->
+		                        	<div id="account_right_account" style="display:block;">
+		
+									</div>
+		
+									<!-- User inbox -->
+		                            <div id="account_right_inbox" style="display:none;"> 
+										<MSL:inbox ItemsToDisplay="3" />
+									</div>
+									
+									<!-- admin and control bars - these are picked apart by JavaScript -->
+		                            <div id="account_right_admin" style="display:none;">
+										<MSL:Admin>
+									</div>
+		
+		                            <div id="account_right_control" style="display:none;">
+										<MSL:ControlPanel />
+									</div>
+		                    	</div>
+		                        <div id="account_footer_buttons">
+		                            <div id="account_footer_logout_btn"></div>
+		                            <div id="account_footer_edit_page_btn"></div></div>
+		                    </div>
+		                    
+						</div> <!-- END OF right hand panel -->
+					</div> <!-- END OF panelheight -->
+				</div> <!-- END OF panelcontent -->
+		    </div> <!-- END OF supplementarypanels -->
+		</div>
+		
+		<!-- Le JavaScripts -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+		<script type="text/javascript" src="MSLPrettyUserBar.js"></script>
+	</body>
+</html>
