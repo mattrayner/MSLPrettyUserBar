@@ -1,4 +1,17 @@
 window.onload = function(){
+	/**
+	 * Check to see if there was an error with logging in (wrong password etc.)
+	 *
+	 *   ******** THIS WILL CHANGE DEPENDING ON WIDGET PLACEMENT **********
+	 **/
+	var loginErrorID = '#ctl00_ctl10_lblLoginError';
+	var checkLoginError = $(loginErrorID);
+	
+	if(checkLoginError.length) {
+		var alerttext = $(loginErrorID).text();
+		alert(alerttext);
+	}
+
 	/* Check to see if the user is logged in */
 	checkLogin = $('.sidepanel.controlpanel');
 	if (checkLogin.length) {
@@ -138,11 +151,4 @@ window.onload = function(){
 		$('a#account_admin_btn').removeClass("selected");
 		$('a#account_control_btn').addClass("selected");															 
 	});
-	
-	var checkLoginError = $('#ctl00_ctl10_lblLoginError');
-	
-	if(checkLoginError.length) {
-		var alerttext = $('#ctl00_ctl10_lblLoginError').text();
-		alert(alerttext);
-	}
 };
